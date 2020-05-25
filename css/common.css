@@ -18,18 +18,41 @@ header {
   top: 0;
   left: 0;
   z-index: 200;
+  background-color: white;
+  transition: all 0.5s;
 }
 
-nav {
-  width: 60%;
+.gnb_header_wrap {
+  width: 1600px;
   height: 80px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.header_logo {
+  background: url(../img/naver/header_logo.png);
+  background-size: 87px 17px;
+  float: left;
+  width: 87px;
+  height: 17px;
+  margin: 32px 0 0 30px;
+}
+
+.header_nav {
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.header_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
-nav div {
+.headr_list li {
   width: 100%;
   height: 100%;
   display: flex;
@@ -41,6 +64,8 @@ nav div {
   color: black;
   cursor: pointer;
   position: relative;
+  margin: 0 32px;
+  padding: 29px 0 30px;
 }
 
 .gnb_menu::before {
@@ -50,6 +75,36 @@ nav div {
   width: calc(100% + 2px);
   height: 2px;
   background-color: #1ec545;
+}
+
+.header_utill {
+  float: right;
+  width: 144px;
+  height: 23px;
+  margin: 29px 25px 0 0;
+  display: flex;
+}
+
+.header_lang {
+  vertical-align: middle;
+  margin: 0 41px 0 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header_lang a:first-child {
+  margin-right: 10.5px;
+}
+
+.header_lang a:last-child {
+  margin-left: 10.5px;
+}
+
+.header_sitemap_button {
+  font-size: 30px;
+  line-height: 26px;
 }
 
 #snb1,
@@ -70,7 +125,7 @@ nav div {
   height: 80vh;
   margin: 0 auto;
   position: relative;
-  padding: 80px 0 0;
+  margin-top: 80px;
 }
 
 .myslide {
@@ -250,4 +305,139 @@ nav div {
   right: 190px;
   background-image: url(../img/naver/sprite.png);
   background-position: -192px -1162px;
+}
+
+.main_content {
+  width: 100%;
+  padding: 0 150px 120px;
+  margin-top: 75px;
+}
+
+.content_summary {
+  margin-top: 69px;
+}
+
+.summary_container {
+  float: left;
+  width: 26.6%;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+
+.summary_container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #efefef;
+}
+
+.summary_container:first-child::before {
+  content: none;
+}
+
+.summary_container:first-child {
+  padding-left: 0;
+}
+
+.summary_container:last-child {
+  padding-right: 0;
+}
+
+.summary_title {
+  font-size: 14px;
+  color: #212121;
+}
+
+.news_box {
+  width: 100%;
+  height: 76px;
+  margin: 31px 0 30px;
+  box-sizing: border-box;
+}
+
+.news_box a {
+  cursor: pointer;
+}
+
+.news_box a:hover {
+  text-decoration: underline;
+}
+
+.news_title {
+  font-size: 16px;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  box-sizing: border-box;
+}
+
+.news_text {
+  height: 44px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #878890;
+  line-height: 1.6;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+}
+
+.summary_link {
+  position: relative;
+  padding-right: 32px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.icon_arrow {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  width: 18px;
+  height: 18px;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.icon_arrow::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 8px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: url(../img/naver/sprite.png) no-repeat;
+  -webkit-background-size: 474px 1250px;
+  background-size: 474px 1250px;
+  background-position: -102px -50px;
+}
+
+.career_text {
+  height: 76px;
+  margin: 31px 0 30px;
+  font-size: 18px;
+  color: #333;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+}
+
+.stock_info_box {
+  height: 76px;
+  margin: 23px 0 38px;
+  color: #333;
 }
