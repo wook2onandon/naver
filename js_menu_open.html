@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      background-color: white;
+    }
+
+    #gnb {
+      width: 1000px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #lnb {
+      width: 100%;
+      height: 100px;
+      background-color: greenyellow;
+      display: none;
+    }
+
+    .gnb_menu {
+      color: black;
+      height: 100%;
+    }
+
+    .lnb_menu {
+      color: black;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="gnb">
+      <div class="gnb_menu" onmouseover="menuOpen(1)" onmouseout="menuClose()">Menu 1</div>
+      <div class="gnb_menu" onmouseover="menuOpen(2)" onmouseout="menuClose()">Menu 2</div>
+      <div class="gnb_menu" onmouseover="menuOpen(3)" onmouseout="menuClose()">Menu 3</div>
+      <div class="gnb_menu" onmouseover="menuOpen(4)" onmouseout="menuClose()">Menu 4</div>
+      <div class="gnb_menu" onmouseover="menuOpen(5)" onmouseout="menuClose()">Menu 5</div>
+    </nav>
+  </header>
+  <div id="lnb">
+    <div class="lnb_menu">Local Menu 1</div>
+    <div class="lnb_menu">Local Menu 2</div>
+    <div class="lnb_menu">Local Menu 3</div>
+    <div class="lnb_menu">Local Menu 4</div>
+    <div class="lnb_menu">Local Menu 5</div>
+  </div>
+
+  <script>
+    function menuOpen(openIndex) {
+      document.getElementById("lnb").style.display = "block"
+      for (i = 0; i < document.getElementsByClassName("gnb_menu").length; i++) {
+        document.getElementsByClassName("lnb_menu")[i].style.display = "none";
+        document.getElementsByClassName("lnb_menu")[openIndex - 1].style.display = "block";
+      }
+    }
+
+    function menuClose() {
+      document.getElementById("lnb").style.display = "none"
+    }
+  </script>
+</body>
+
+</html>

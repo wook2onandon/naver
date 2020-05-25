@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Naver Corporation</title>
 
     <link rel="stylesheet" type="text/css" href="css/destyle.css" />
     <link rel="stylesheet" type="text/css" href="css/common.css" />
@@ -11,14 +11,23 @@
 
   <body>
     <header id="gnb_header">
-      <nav>
-        <div onmouseover="snbOpen(1)" onmouseout="snbClose()"><a class="gnb_menu">네이버</a></div>
-        <div onmouseover="snbOpen(2)" onmouseout="snbClose()"><a class="gnb_menu">서비스</a></div>
-        <div onmouseover="snbOpen(3)" onmouseout="snbClose()"><a class="gnb_menu">가치실현</a></div>
-        <div onmouseover="snbOpen(4)" onmouseout="snbClose()"><a class="gnb_menu">홍보</a></div>
-        <div onmouseover="snbOpen(5)" onmouseout="snbClose()"><a class="gnb_menu">투자정보</a></div>
-        <div onmouseover="snbOpen(6)" onmouseout="snbClose()"><a class="gnb_menu">채용</a></div>
-      </nav>
+      <div class="gnb_header_wrap">
+        <a class="header_logo"></a>
+        <nav class="header_nav">
+          <ul class="header_list">
+            <li onmouseover="snbOpen(1)" onmouseout="snbClose()"><a class="gnb_menu">네이버</a></li>
+            <li onmouseover="snbOpen(2)" onmouseout="snbClose()"><a class="gnb_menu">서비스</a></li>
+            <li onmouseover="snbOpen(3)" onmouseout="snbClose()"><a class="gnb_menu">가치실현</a></li>
+            <li onmouseover="snbOpen(4)" onmouseout="snbClose()"><a class="gnb_menu">홍보</a></li>
+            <li onmouseover="snbOpen(5)" onmouseout="snbClose()"><a class="gnb_menu">투자정보</a></li>
+            <li onmouseover="snbOpen(6)" onmouseout="snbClose()"><a class="gnb_menu">채용</a></li>
+          </ul>
+        </nav>
+        <div class="header_utill">
+          <div class="header_lang"><a>KOR</a>|<a>ENG</a></div>
+          <button class="header_sitemap_button">=</button>
+        </div>
+      </div>
 
       <div id="snb1" onmouseover="snbOpen(1)" onmouseout="snbClose()">서브메뉴 1</div>
       <div id="snb2" onmouseover="snbOpen(2)" onmouseout="snbClose()">서브메뉴 2</div>
@@ -87,97 +96,141 @@
       <div class="slide_num"><strong id="slide_current_num">1</strong>&nbsp;&nbsp;|&nbsp;&nbsp;4</div>
     </div>
 
+    <section class="main_content">
+      <ul class="content_summary">
+        <li class="summary_container">
+          <h3 class="summary_title"><strong>NEWS</strong></h3>
+          <div class="news_box">
+            <a>
+              <strong class="news_title">네이버,&nbsp;개인정보보호위원회 주최 ‘2020&nbsp;개인정보보호 인식 주간 캠페인’&nbsp;참여</strong>
+              <p class="news_text">
+                네이버, 개인정보보호위원회 주최 ‘2020 개인정보보호 인식 주간 캠페인’ 참여 - 개인정보보호위원회, APPA가 함께 개최하는
+                ‘개인정보보호 주간’에 참여, 개인정보보호 생활 실천 수칙 공개 - 6월 17일, ‘캘리포니아주 소비자 프라이버시 보호법’ 주제로
+                온라인 교육 실시 … 글로벌 진출 준비하는 스타트업, 국내 인터넷 기업 인식 제고 도울
+              </p>
+            </a>
+          </div>
+          <a class="summary_link">바로가기<span class="icon_arrow"></span> </a>
+        </li>
+
+        <li class="summary_container">
+          <h3 class="summary_title"><strong>CAREER</strong></h3>
+          <p class="career_text">
+            <strong>수 많은 사용자의 목소리에서<br />내 일의 자부심과 무게를 느낍니다.</strong>
+          </p>
+
+          <a class="summary_link">네이버에서 일한다는 것<span class="icon_arrow"></span> </a>
+        </li>
+
+        <li class="summary_container">
+          <div class="summary_stock">
+            <h3 class="summary_title"><strong>STOCK</strong></h3>
+            <div class="stock_info_box">
+              <div class="stock_price_box">
+                <p class="price">241,000<span class="unit">원</span></p>
+                <span></span>
+              </div>
+            </div>
+
+            <a class="summary_link">네이버에서 일한다는 것<span class="icon_arrow"></span> </a>
+          </div>
+        </li>
+        <li class="summary_container"></li>
+      </ul>
+    </section>
+
     <script>
       //메뉴바
       function snbOpen(submenuNum) {
         switch (submenuNum) {
           case 1:
-            document.getElementById("snb1").style.display = "block";
+            document.getElementById('snb1').style.display = 'block';
             break;
           case 2:
-            document.getElementById("snb2").style.display = "block";
+            document.getElementById('snb2').style.display = 'block';
             break;
           case 3:
-            document.getElementById("snb3").style.display = "block";
+            document.getElementById('snb3').style.display = 'block';
             break;
           case 4:
-            document.getElementById("snb4").style.display = "block";
+            document.getElementById('snb4').style.display = 'block';
             break;
           case 5:
-            document.getElementById("snb5").style.display = "block";
+            document.getElementById('snb5').style.display = 'block';
             break;
           case 6:
-            document.getElementById("snb6").style.display = "block";
+            document.getElementById('snb6').style.display = 'block';
             break;
         }
       }
 
       function snbClose() {
-        document.getElementById("snb1").style.display = "none";
-        document.getElementById("snb2").style.display = "none";
-        document.getElementById("snb3").style.display = "none";
-        document.getElementById("snb4").style.display = "none";
-        document.getElementById("snb5").style.display = "none";
-        document.getElementById("snb6").style.display = "none";
+        document.getElementById('snb1').style.display = 'none';
+        document.getElementById('snb2').style.display = 'none';
+        document.getElementById('snb3').style.display = 'none';
+        document.getElementById('snb4').style.display = 'none';
+        document.getElementById('snb5').style.display = 'none';
+        document.getElementById('snb6').style.display = 'none';
       }
 
+      //스크롤 네비바
       var prevYscroll = window.pageYOffset;
       window.onscroll = function () {
         var presentYscroll = window.pageYOffset;
-        if (presentYscroll > prevYscroll) {
-          document.getElementById("gnb_header").style = "top:-80px;";
+        if (presentYscroll > prevYscroll && presentYscroll > 80) {
+          document.getElementById('gnb_header').style = 'top:-80px;';
         } else {
-          document.getElementById("logo").style = "top:0px; ";
+          document.getElementById('gnb_header').style = 'top:0px; ';
         }
         prevYscroll = presentYscroll;
       };
 
       //슬라이드
       var slideIndex = 1; // 현재 슬라이드의 넘버
-      var mySlide = document.getElementsByClassName("myslide");
+      var mySlide = document.getElementsByClassName('myslide');
       var currentBar = 25;
       setTimeout(slideNext, 5000);
 
       function slidePrev() {
-        console.log("mySlide.length");
+        console.log('mySlide.length');
         for (i = 0; i < mySlide.length; i++) {
-          mySlide[i].style.display = "none";
+          mySlide[i].style.display = 'none';
         }
 
         if (slideIndex == 1) {
-          mySlide[mySlide.length - 1].style.display = "block";
+          mySlide[mySlide.length - 1].style.display = 'block';
           slideIndex = mySlide.length;
           currentBar = mySlide.length * 25;
-          document.getElementById("current_progressbar").style.width = currentBar + "%";
-          document.getElementById("slide_current_num").innerHTML = slideIndex;
+          document.getElementById('current_progressbar').style.width = currentBar + '%';
+          document.getElementById('slide_current_num').innerHTML = slideIndex;
         } else {
-          mySlide[slideIndex - 2].style.display = "block";
+          mySlide[slideIndex - 2].style.display = 'block';
           slideIndex = slideIndex - 1;
           currentBar = slideIndex * 25;
-          document.getElementById("current_progressbar").style.width = currentBar + "%";
-          document.getElementById("slide_current_num").innerHTML = slideIndex;
+          document.getElementById('current_progressbar').style.width = currentBar + '%';
+          document.getElementById('slide_current_num').innerHTML = slideIndex;
         }
       }
 
       function slideNext() {
-        console.log("mySlide.length");
+        console.log('mySlide.length');
 
         for (i = 0; i < mySlide.length; i++) {
-          mySlide[i].style.display = "none";
+          mySlide[i].style.display = 'none';
         }
 
         if (slideIndex == mySlide.length) {
-          mySlide[0].style.display = "block";
+          mySlide[0].style.display = 'block';
           currentBar = 25;
-          document.getElementById("current_progressbar").style.width = currentBar + "%";
+          document.getElementById('current_progressbar').style.width = currentBar + '%';
           slideIndex = 1;
-          document.getElementById("slide_current_num").innerHTML = slideIndex;
+          document.getElementById('slide_current_num').innerHTML = slideIndex;
         } else {
-          mySlide[slideIndex].style.display = "block";
+          mySlide[slideIndex].style.display = 'block';
           slideIndex = slideIndex + 1;
           currentBar = slideIndex * 25;
-          document.getElementById("current_progressbar").style.width = currentBar + "%";
-          document.getElementById("slide_current_num").innerHTML = slideIndex;
+          document.getElementById('current_progressbar').style.width = currentBar + '%';
+          document.getElementById('slide_current_num').innerHTML = slideIndex;
         }
         setTimeout(slideNext, 5000);
       }
