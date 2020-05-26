@@ -315,10 +315,13 @@ header {
 
 .content_summary {
   margin-top: 69px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
 }
 
 .summary_container {
-  float: left;
   width: 26.6%;
   padding-left: 50px;
   padding-right: 50px;
@@ -345,6 +348,7 @@ header {
 
 .summary_container:last-child {
   padding-right: 0;
+  width: 20.2%;
 }
 
 .summary_title {
@@ -383,11 +387,8 @@ header {
   font-size: 15px;
   color: #878890;
   line-height: 1.6;
-  display: -webkit-box;
   overflow: hidden;
-  -webkit-box-orient: vertical;
   word-break: break-all;
-  -webkit-line-clamp: 2;
 }
 
 .summary_link {
@@ -416,10 +417,8 @@ header {
   top: 50%;
   width: 5px;
   height: 8px;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background: url(../img/naver/sprite.png) no-repeat;
-  -webkit-background-size: 474px 1250px;
   background-size: 474px 1250px;
   background-position: -102px -50px;
 }
@@ -440,4 +439,214 @@ header {
   height: 76px;
   margin: 23px 0 38px;
   color: #333;
+}
+
+.stock_price_box {
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.stock_price_box::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+
+.stock_price_box::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.price {
+  float: left;
+  font-size: 36px;
+  letter-spacing: -1.7px;
+  color: black;
+  line-height: 50.4px;
+}
+
+.unit {
+  font-size: 12px;
+}
+
+.price_updown {
+  float: right;
+  margin-top: 23px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.price_updown::before {
+  width: 10px;
+  height: 6px;
+  background: url(../img/naver/sprite.png) no-repeat;
+  background-size: 474px 1250px;
+  background-position: -318px -38px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -3px;
+}
+
+/* content_service */
+
+.content_service {
+  margin-top: 98px;
+  position: relative;
+}
+
+.content_list_container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service_thumbnail_box {
+  overflow: hidden;
+  position: relative;
+  width: 33.3%;
+  padding-top: 25%;
+  background: no-repeat 50%;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.thumbnail_dimmed {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 62, 80, 0.5);
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.thumbnail_dimmed dl {
+  position: absolute;
+  left: 0px;
+  bottom: -103px;
+  width: 100%;
+  padding-top: 50px;
+  padding-left: 30px;
+  color: #fff;
+  transition: bottom 0.3s;
+}
+
+.thumbnail_dimmed dl::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background: url(../img/naver/sprite.png) no-repeat;
+  background-size: 474px 1250px;
+  background-position: -199px -129px;
+}
+
+.thumbnail_dimmed dl dt {
+  margin-bottom: 2px;
+  font-size: 22px;
+}
+
+.thumbnail_dimmed dl dd {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* content_support */
+
+.content_support {
+  margin-top: 112px;
+  text-align: center;
+}
+
+.support_title {
+  margin-bottom: 17px;
+  font-size: 32px;
+  color: #212121;
+}
+
+.support_text {
+  margin-bottom: 134px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.support_list_container {
+  width: 1360px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.support_list_box {
+  position: relative;
+  width: 25%;
+}
+
+.support_list_box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 215px;
+  background-color: #efefef;
+}
+
+.support_list_box dt {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #00b843;
+  cursor: pointer;
+}
+
+.support_list_box dt:hover {
+  text-decoration: underline;
+}
+
+.support_list_box dd {
+  font-size: 15px;
+  color: #878890;
+  line-height: 1.6;
+}
+
+.text_line {
+  display: block;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.support_list_box a {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 135px 10px 0;
+}
+
+.creators::before {
+  width: 87px;
+  background-position: 0 -957px;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100px;
+  transform: translateX(-50%);
+  background: url(../img/naver/sprite.png) no-repeat;
+  background-size: 474px 1250px;
 }
