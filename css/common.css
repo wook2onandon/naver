@@ -114,18 +114,69 @@ header {
 #snb5,
 #snb6 {
   background-color: #02c759;
-  color: red;
   width: 100%;
   height: 276px;
   display: none;
 }
+
+.gnb_dropmenu_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.gnb_dropmenu {
+  width: 190px;
+  height: 276px;
+  padding: 28px 0 0;
+  position: relative;
+}
+
+.gnb_dropmenu:hover {
+  background-color: #0fb93c;
+}
+
+.gnb_dropmenu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #4bd16a;
+}
+
+.gnb_dropmenu_list_wrap li {
+  margin: 0 0 5px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.gnb_dropmenu_list_wrap li a {
+  display: block;
+  padding: 0 0 0 28px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.depth_blank {
+  margin-bottom: 14px;
+}
+
+/* 메인 컨테이너 */
+
+.container {
+  padding: 80px 0 160px;
+  position: relative;
+}
+
 /* 슬라이더 */
 .slide_container {
   width: 100%;
   height: 80vh;
   margin: 0 auto;
   position: relative;
-  margin-top: 80px;
+
 }
 
 .myslide {
@@ -607,6 +658,9 @@ header {
   height: 215px;
   background-color: #efefef;
 }
+.support_list_box:first-child::before {
+  content: none;
+}
 
 .support_list_box dt {
   margin-bottom: 10px;
@@ -639,9 +693,8 @@ header {
 }
 
 .creators::before {
-  width: 87px;
-  background-position: 0 -957px;
   content: '';
+  width: 87px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -649,4 +702,166 @@ header {
   transform: translateX(-50%);
   background: url(../img/naver/sprite.png) no-repeat;
   background-size: 474px 1250px;
+  background-position: 0 -957px;
 }
+
+.business::before {
+  content: '';
+  width: 101px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100px;
+  transform: translateX(-50%);
+  background: url(../img/naver/sprite.png) no-repeat;
+  background-size: 474px 1250px;
+  background-position: -92px -957px;
+}
+
+.developers::before {
+  content: '';
+  width: 110px;
+  height: 95px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: url(../img/naver/sprite.png) no-repeat;
+  background-size: 474px 1250px;
+  background-position: -199px -957px;
+}
+
+.flower::before {
+  content: '';
+  width: 93px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100px;
+  transform: translateX(-50%);
+  background: url(../img/naver/sprite.png) no-repeat;
+  background-size: 474px 1250px;
+  background-position: -316px -957px;
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+.footer_wrap {
+  position: relative;
+  width: 1600px;
+  margin: 0 auto;
+  padding: 74px 0 70px;
+  text-align: center;
+}
+
+.footer_logo {
+  position: absolute;
+  left: 30px;
+  top: 76px;
+  width: 63px;
+  height: 13px;
+  margin: 0 auto;
+  background: url(../img/naver/footer_logo.png) no-repeat;
+  background-size: 63px 13px;
+}
+
+.footer_menu {
+  position: absolute;
+  left: 105px;
+  top: 74px;
+  font-size: 0;
+}
+
+.footer_menu li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.footer_menu li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 3px;
+  width: 1px;
+  height: 12px;
+  background-color: #dfe0e1;
+}
+
+.footer_menu li:first-child::before {
+  content: none;
+}
+
+.footer_menu_item {
+  color: #878890;
+}
+
+.affiliate_box {
+  position: absolute;
+  right: 30px;
+  top: 74px;
+}
+
+.btn_affiliate {
+  position: relative;
+  padding-right: 26px;
+}
+
+.btn_affiliate::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: url(../img/naver/sprite.png) no-repeat;
+  background-size: 474px 1250px;
+  background-position: -222px -26px;
+}
+
+.affiliate_list {
+  display: none;
+  position: absolute;
+  left: -81px;
+  bottom: 0;
+  width: 200px;
+  padding: 27px 0 25px;
+  border: 1px solid #dfe0e1;
+  background-color: #fff;
+  text-align: left;
+}
+
+.affiliate_item {
+  margin-top: 13px;
+}
+
+.affiliate_item:first-child {
+  margin-top: 0;
+}
+
+.affiliate_item a {
+  display: block;
+  width: 100%;
+  padding: 0 24px;
+  color: #878890;
+}
+
+.footer_copy {
+  margin: 0 auto;
+  width: 337px;
+  height: 16px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -999px;
+  background: url(../img/naver/footer_copy.png) no-repeat;
+  overflow: hidden;
+}
+
