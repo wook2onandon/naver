@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naver Corporation</title>
 
-    <link rel="stylesheet" type="text/css" href="css/destyle.css" />
-    <link rel="stylesheet" type="text/css" href="css/common.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naver Corporation</title>
 
-  <body>
-    <header id="gnb_header">
-      <div class="gnb_header_wrap">
-        <a class="header_logo"></a>
-        <nav class="header_nav">
-          <ul class="header_list">
-            <li onmouseover="snbOpen(1)" onmouseout="snbClose()"><a class="gnb_menu">네이버</a></li>
-            <li onmouseover="snbOpen(2)" onmouseout="snbClose()"><a class="gnb_menu">서비스</a></li>
-            <li onmouseover="snbOpen(3)" onmouseout="snbClose()"><a class="gnb_menu">가치실현</a></li>
-            <li onmouseover="snbOpen(4)" onmouseout="snbClose()"><a class="gnb_menu">홍보</a></li>
-            <li onmouseover="snbOpen(5)" onmouseout="snbClose()"><a class="gnb_menu">투자정보</a></li>
-            <li onmouseover="snbOpen(6)" onmouseout="snbClose()"><a class="gnb_menu">채용</a></li>
-          </ul>
-        </nav>
-        <div class="header_utill">
-          <div class="header_lang"><a>KOR</a>|<a>ENG</a></div>
-          <button class="header_sitemap_button">=</button>
-        </div>
+  <link rel="stylesheet" type="text/css" href="css/destyle.css" />
+  <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+
+<body>
+  <header id="gnb_header">
+    <div class="gnb_header_wrap">
+      <a class="header_logo"></a>
+      <nav class="header_nav">
+        <ul class="header_list">
+          <li onmouseover="snbOpen(1)" onmouseout="snbClose()"><a class="gnb_menu">네이버</a></li>
+          <li onmouseover="snbOpen(2)" onmouseout="snbClose()"><a class="gnb_menu">서비스</a></li>
+          <li onmouseover="snbOpen(3)" onmouseout="snbClose()"><a class="gnb_menu">가치실현</a></li>
+          <li onmouseover="snbOpen(4)" onmouseout="snbClose()"><a class="gnb_menu">홍보</a></li>
+          <li onmouseover="snbOpen(5)" onmouseout="snbClose()"><a class="gnb_menu">투자정보</a></li>
+          <li onmouseover="snbOpen(6)" onmouseout="snbClose()"><a class="gnb_menu">채용</a></li>
+        </ul>
+      </nav>
+      <div class="header_utill">
+        <div class="header_lang"><a>KOR</a>|<a>ENG</a></div>
+        <button class="header_sitemap_button">=</button>
       </div>
+    </div>
 
-      <div id="snb1" onmouseover="snbOpen(1)" onmouseout="snbClose()">서브메뉴 1</div>
-      <div id="snb2" onmouseover="snbOpen(2)" onmouseout="snbClose()">서브메뉴 2</div>
-      <div id="snb3" onmouseover="snbOpen(3)" onmouseout="snbClose()">서브메뉴 3</div>
-      <div id="snb4" onmouseover="snbOpen(4)" onmouseout="snbClose()">서브메뉴 4</div>
-      <div id="snb5" onmouseover="snbOpen(5)" onmouseout="snbClose()">서브메뉴 5</div>
-      <div id="snb6" onmouseover="snbOpen(6)" onmouseout="snbClose()">서브메뉴 6</div>
-    </header>
+    <div id="snb1" onmouseover="snbOpen(1)" onmouseout="snbClose()">
+      <ul class="gnb_dropmenu_wrap">
+        <li class="gnb_dropmenu">
+          <ul class="gnb_dropmenu_list_wrap">
+            <li class="depth_blank"><a>NAVER</a></li>
+            <li><a>네이버 소개</a></li>
+            <li><a>주요연혁</a></li>
+            <li><a>수상내역</a></li>
+          </ul>
+        </li>
+        <li class="gnb_dropmenu">
+          <ul class="gnb_dropmenu_list_wrap">
+            <li><a>주요관계사</a></li>
+        </li>
+        <li class="gnb_dropmenu">
+          <ul class="gnb_dropmenu_list_wrap">
+            <li class="depth_blank"><a>제휴제안</a></li>
+            <li><a>제휴제안 안내</a></li>
+            <li><a>제휴제안 등록</a></li>
+            <li><a>검토현황 조회</a></li>
+        </li>
+        <li class="gnb_dropmenu">
+          <ul class="gnb_dropmenu_list_wrap">
+            <li><a>CONTACT</>
+            </li>
+        </li>
+      </ul>
+    </div>
+    <div id="snb2" onmouseover="snbOpen(2)" onmouseout="snbClose()"></div>
+    <div id="snb3" onmouseover="snbOpen(3)" onmouseout="snbClose()"></div>
+    <div id="snb4" onmouseover="snbOpen(4)" onmouseout="snbClose()"></div>
+    <div id="snb5" onmouseover="snbOpen(5)" onmouseout="snbClose()"></div>
+    <div id="snb6" onmouseover="snbOpen(6)" onmouseout="snbClose()"></div>
+  </header>
+
+
+  <div class="container">
     <div class="slide_container">
       <div class="myslide">
         <div class="myslide_bg">
@@ -95,8 +126,7 @@
       </div>
       <div class="slide_num"><strong id="slide_current_num">1</strong>&nbsp;&nbsp;|&nbsp;&nbsp;4</div>
     </div>
-
-    <section class="main_content">
+    <div class="main_content">
       <ul class="content_summary">
         <li class="summary_container">
           <h3 class="summary_title"><strong>NEWS</strong></h3>
@@ -240,19 +270,21 @@
         </div>
         <ul class="support_list_container">
           <li class="support_list_box">
-            <a href="/service/creators" class="creators">
-              <dl>
-                <dt>Creators With Naver</dt>
-                <dd>
-                  <span class="text_line">다양한 분야의 창작자들이 그들의 이름을</span>
-                  빛낼 수 있도록 네이버가 함께 합니다.
-                </dd>
-              </dl>
-            </a>
+            <div>
+              <a href="/service/creators" class="creators">
+                <dl>
+                  <dt>Creators With Naver</dt>
+                  <dd>
+                    <span class="text_line">다양한 분야의 창작자들이 그들의 이름을</span>
+                    빛낼 수 있도록 네이버가 함께 합니다.
+                  </dd>
+                </dl>
+              </a>
+              </di>
           </li>
 
           <li class="support_list_box">
-            <a href="/service/creators" class="creators">
+            <a href="/service/creators" class="business">
               <dl>
                 <dt>Business With Naver</dt>
                 <dd>
@@ -264,7 +296,7 @@
           </li>
 
           <li class="support_list_box">
-            <a href="/service/creators" class="creators">
+            <a href="/service/creators" class="developers">
               <dl>
                 <dt>Developers With Naver</dt>
                 <dd>
@@ -276,7 +308,7 @@
           </li>
 
           <li class="support_list_box">
-            <a href="/service/creators" class="creators">
+            <a href="/service/creators" class="flower">
               <dl>
                 <dt>프로젝트 꽃</dt>
                 <dd>
@@ -288,7 +320,65 @@
           </li>
         </ul>
       </div>
+    </div>
     </section>
+    <footer>
+      <div class="footer_wrap">
+        <strong class="footer_logo"></strong>
+        <ul class="footer_menu">
+          <li>
+            <a href="/naver/proposalGuide" class="footer_menu_item">제휴제안</a>
+          </li>
+          <li>
+            <a href="/naver/proposalGuide" class="footer_menu_item">기업윤리 상담센터</a>
+          </li>
+          <li>
+            <a href="/naver/proposalGuide" class="footer_menu_item">개인정보 처리방침</a>
+          </li>
+        </ul>
+        <div class="affiliate_box">
+          <button class="btn_affiliate" type="button" aria-expanded="false">자회사 바로가기</button>
+          <ul class="affiliate_list" role="listbox">
+            <li class="affiliate_item" role="option" aria-selected="false">
+              <a href="https://linepluscorp.com/" target="_blank">
+                <span>LINE</span>
+              </a>
+            </li>
+            <li class="affiliate_item" role="option" aria-selected="false">
+              <a href="https://linepluscorp.com/" target="_blank">
+                <span>NAVER Labs</span>
+              </a>
+            </li>
+            <li class="affiliate_item" role="option" aria-selected="false">
+              <a href="https://linepluscorp.com/" target="_blank">
+                <span>NBP</span>
+              </a>
+            </li>
+            <li class="affiliate_item" role="option" aria-selected="false">
+              <a href="https://linepluscorp.com/" target="_blank">
+                <span>SNOW</span>
+              </a>
+            </li>
+            <li class="affiliate_item" role="option" aria-selected="false">
+              <a href="https://linepluscorp.com/" target="_blank">
+                <span>Webtoon</span>
+              </a>
+            </li>
+            <li class="affiliate_item" role="option" aria-selected="false">
+              <a href="https://linepluscorp.com/" target="_blank">
+                <span>Works Mobile/span>
+              </a>
+            </li>
+            <li class="affiliate_item" role="option" aria-selected="false">
+              <a href="https://linepluscorp.com/" target="_blank">
+                <span>NAVER FINANCIAL</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer_copy"></p>
+      </div>
+    </footer>
 
     <script>
       //메뉴바
@@ -385,6 +475,13 @@
         }
         setTimeout(slideNext, 5000);
       }
+
+      /* 자회사바로가기 */
+
+      function affiliateClick() {
+        document.getElementsByClassName("affiliate_list").style.display = 'block';
+      }
     </script>
-  </body>
+</body>
+
 </html>
