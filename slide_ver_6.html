@@ -62,8 +62,8 @@
         <div class="slide_logo4"></div>
       </div>
     </div>
-    <a class="button_prev" onclick="slidePrev()"></a>
-    <a class="button_next" onclick="slideNext()"></a>
+    <a class="button_prev" id="button_Prev"></a>
+    <a class="button_next" id="button_Next"></a>
 
     <div class="hr_bg">
       <span class="hr_bar" id="current_progressbar"></span>
@@ -78,12 +78,33 @@
     //슬라이드
     var slideIndex = 0; // 현재 슬라이드의 넘버
     var mySlide = document.getElementsByClassName("myslide");
-    var currentBar = 25;
+    var currentBar = 100 / mySlide.length;
+
+    var slideInter = setInterval(slideNext, 5000);
+
+    function setInterSlide() {
+      slideInter = setInterval(slideNext, 5000);
+    }
+
+    function clearInterSlide() {
+      clearInterval(slideInter);
+    }
+
+    window.onload = function () {
+      document.getElementById('button_Next').addEventListener('click', slideNext);
+      document.getElementById('button_Prev').addEventListener('click', slidePrev);
+    }
+
 
 
     function slidePrev() {
 
       console.log(mySlide.length); //슬라이드 갯수 4가 출력 됨.
+      clearInterSlide();
+
+      document.getElementById('button_Next').removeEventListener('click', slideNext);
+      document.getElementById('button_Prev').removeEventListener('click', slidePrev);
+
 
       if (slideIndex == 0) { //첫번째 슬라이드일 경우
         mySlide[mySlide.length - 2].style = "left:-100%;"; //다음 다음 슬라이드 준비
@@ -108,52 +129,44 @@
       if (slideIndex < 0) {
         slideIndex = mySlide.length - 1;
       }//슬라이드 인덱스 증가
+
+      currentBar = currentBar - (100 / mySlide.length);
+      if (currentBar <= 0) { currentBar = 100; }
+      document.getElementById("current_progressbar").style.width = currentBar + "%";
+      document.getElementById("slide_current_num").innerHTML = slideIndex + 1;
+
+
+      setTimeout(function () {
+        document.getElementById('button_Next').addEventListener('click', slideNext);
+        document.getElementById('button_Prev').addEventListener('click', slidePrev);
+      }, 1000);
+
+      setInterSlide();
     }
-    /*
-          if (slideIndex == 1) {
-    
-            mySlide[0].style = "left:100%; transition: left 0.5s;";
-            mySlide[mySlide.length - 1].style = "left:0px; transition: left 0.5s;";
-    
-            slideIndex = mySlide.length;
-            currentBar = mySlide.length * 25;
-            document.getElementById("current_progressbar").style.width = currentBar + "%";
-            document.getElementById("slide_current_num").innerHTML = slideIndex;
-          }
-    
-          else {
-            mySlide[slideIndex - 1].style = "left:100%; transition: left 0.5s;";
-            mySlide[slideIndex - 2].style = "left:0px; transition: left 0.5s;";
-    
-            if (slideIndex == 2) {
-              mySlide[0].style = "left:-100%;";
-              mySlide[mySlide.length - 1].style = "left:-100%;";
-            }
-    
-            console.log(slideIndex) //디버깅을 위한 코드 심기
-    
-            slideIndex = slideIndex - 1;
-            currentBar = slideIndex * 25;
-    
-            document.getElementById("current_progressbar").style.width = currentBar + "%";
-            document.getElementById("slide_current_num").innerHTML = slideIndex;
-          }
-        }
-    */
+
+
     function slideNext() {
 
       console.log(mySlide.length); //슬라이드 갯수 4가 출력 됨.
+
+      clearInterSlide();
+
+      document.getElementById('button_Next').removeEventListener('click', slideNext);
+      document.getElementById('button_Prev').removeEventListener('click', slidePrev);
+
 
       if (slideIndex == 0) { //첫번째 슬라이드일 경우
         mySlide[mySlide.length - 1].style = "left:100%;"; //마지막 슬라이드 오른쪽으로 준비 - 4번 슬라이드를 준비
         mySlide[slideIndex].style = "left:-100%; transition: left 0.5s;"; //현재 슬라이드 왼쪽 아웃
         mySlide[slideIndex + 1].style = "left:0px; transition: left 0.5s;"; //다음 슬라이드 왼쪽 인
+
       }
 
       else if (slideIndex == mySlide.length - 1) {
         mySlide[slideIndex - 1].style = "left:100%;"; //다음 다음 슬라이드 오른쪽으로 준비 - 1번 슬라이드를 준비
         mySlide[slideIndex].style = "left:-100%; transition: left 0.5s;"; //현재 슬라이드 왼쪽 아웃
         mySlide[0].style = "left:0px; transition: left 0.5s;"; //첫번째 슬라이드 왼쪽 인
+
       }
 
       else {
@@ -167,47 +180,20 @@
       if (slideIndex > mySlide.length - 1) {
         slideIndex = 0;
       }//슬라이드 인덱스 증가
+
+      currentBar = currentBar + (100 / mySlide.length);
+      if (currentBar > 100) { currentBar = 100 / mySlide.length; }
+      document.getElementById("current_progressbar").style.width = currentBar + "%";
+      document.getElementById("slide_current_num").innerHTML = slideIndex + 1;
+
+
+      setTimeout(function () {
+        document.getElementById('button_Next').addEventListener('click', slideNext);
+        document.getElementById('button_Prev').addEventListener('click', slidePrev);
+      }, 1000);
+      setInterSlide();
     }
 
-
-
-
-    /*
-          if (slideIndex == mySlide.length) {
-
-            mySlide[slideIndex - 1].style = "left:-100%; transition: left 0.5s;";
-            mySlide[0].style = "left:0px; transition: left 0.5s;";
-
-            currentBar = 25;
-            document.getElementById("current_progressbar").style.width = currentBar + "%";
-            slideIndex = 1;
-            document.getElementById("slide_curren                                               t_num").innerHTML = slideIndex;
-          }
-
-          else {
-
-            mySlide[slideIndex - 1].style = "left:-100%; transition: left 0.5s;";
-            mySlide[slideIndex].style = "left:0px; transition: left 0.5s;";
-
-            if (slideIndex != mySlide.length - 1) {
-              mySlide[slideIndex + 1].style = "left:100%;";
-            } else {
-              mySlide[0].style = "left:100%;"; slideIdenx = 1; return;
-            } //다음 슬라이드 대기
-
-            //if (slideIndex == mySlide.length - 1) {
-            //  mySlide[0].style = "left:100%;";
-            //}
-
-            console.log(slideIndex) //디버깅을 위한 코드 심기
-
-            slideIndex = slideIndex + 1;
-            currentBar = slideIndex * 25;
-
-            document.getElementById("current_progressbar").style.width = currentBar + "%";
-            document.getElementById("slide_current_num").innerHTML = slideIndex;
-          }
-        }*/
   </script>
 </body>
 
